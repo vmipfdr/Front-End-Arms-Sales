@@ -1,0 +1,8 @@
+.country p {
+  font-size: 24px;
+}
+
+.country a {
+  font-weight: bold;
+  color: green;
+}
