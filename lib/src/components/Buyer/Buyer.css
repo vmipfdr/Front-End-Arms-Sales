@@ -11,3 +11,13 @@ input[type="text"],
 input[type="password"] {
   width: 200px;
 }
+
+.order {
+  border: 2px solid black;
+  margin: 5px;
+  padding: 10px;
+}
+
+span {
+  color: purple;
+}
