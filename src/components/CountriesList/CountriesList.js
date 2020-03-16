@@ -7,10 +7,9 @@ class CountriesList extends Component {
   render() {
     let list = listOfCountries.map(item => {
       return (
-        <div className="country" key={item.alpha3Code}>
+        <div className="country" key={item.code}>
           <p>
-            <Link to={"/country/" + item.alpha3Code}>{item.alpha3Code}</Link>:{" "}
-            {item.name}
+            <Link to={"/country/" + item.code}>{item.code}</Link>: {item.name}
           </p>
         </div>
       );
