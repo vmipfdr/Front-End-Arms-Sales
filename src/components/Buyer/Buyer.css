@@ -21,3 +21,7 @@ input[type="password"] {
 span {
   color: purple;
 }
+
+.container {
+  columns: 3 auto;
+}

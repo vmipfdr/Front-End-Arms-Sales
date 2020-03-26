@@ -109,7 +109,9 @@ class Seller extends Component {
             There are {this.state.salesData.length} records of{" "}
             {this.state.sellerCode} sales available from 1998 to 2018
           </h2>
-          <div className="">{posts}</div>
+          <div className="container">
+            <div className="">{posts}</div>
+          </div>
         </div>
       );
     }

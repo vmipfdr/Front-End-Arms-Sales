@@ -6,7 +6,7 @@ import CountriesList from "../CountriesList/CountriesList";
 import Buyer from "../Buyer/Buyer";
 import Country from "../Country/Country";
 import Seller from "../Seller/Seller";
-import Create from "../Create/Create";
+import Create from "../CreateSale/CreateSale";
 
 //here I should set a method that is passed down to the country component
 
@@ -33,7 +33,7 @@ class App extends Component {
           <Link to="/countrieslist">Country List</Link>
           <Link to="/buyersearch">Search Purchases by Country</Link>
           <Link to="/sellersearch">Search Sales by Country</Link>
-          <Link to="/create">Create a Country</Link>
+          <Link to="/create">Report a Sale</Link>
         </nav>
         <main>
           <Route path="/" exact component={Home} />

@@ -107,7 +107,9 @@ class Buyer extends Component {
             There are {this.state.purchaseData.length} {this.state.buyerCode}{" "}
             purchase records available from 1998 to 2018
           </h2>
-          <div className="">{posts}</div>
+          <div className="container">
+            <div className="">{posts}</div>
+          </div>
         </div>
       );
     }
