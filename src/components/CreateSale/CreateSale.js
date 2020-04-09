@@ -1,23 +1,36 @@
 import React, { Component } from "react";
 
 class Form extends Component {
+  constructor(props) {
+    this.state = {
+      sellerISOCode: "",
+      sellerFull: ""
+    };
+  }
   getInitialState = () => {
     return {
       title: this.props.title || "some title"
     };
   };
 
-  handleTitleChange(e) {
+  onChangeBuyer(e) {
     this.setState({
       title: e.target.value
     });
   }
 
   handleSubmit(e) {
-    e.preventDefault();
-    this.props.onSubmit(this.state);
+    if (this.state === "" || this.state === "") {
+      return;
+    } else {
+      e.preventDefault();
+      console.log("submitted!");
+      const newSale = {
+        sellerISOCode: this.state.sellerISOCode
+      };
+      Axios.post("website", newSale).then(res => console.log(res));
+    }
   }
-
   render() {
     return (
       <form name="create_sale" className="form" onSubmit={this.handleSubmit}>
