@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 body {
@@ -17,7 +17,7 @@ body {
   background-size: cover;
   height: 100vh;
   width: 100%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .App-header {
