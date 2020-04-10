@@ -10,16 +10,16 @@ class Buyer extends Component {
 
     this.state = {
       purchaseData: [],
-      buyerCode: ""
+      buyerCode: "",
     };
   }
 
-  handleClick = e => {
+  handleClick = (e) => {
     e.preventDefault();
     this.componentDidMount();
     console.log("handled buyer click");
   };
-  setBuyer = buyer => {
+  setBuyer = (buyer) => {
     this.setState({ purchaseData: buyer });
     console.log(this.state.purchaseData);
   };
@@ -30,19 +30,19 @@ class Buyer extends Component {
     // console.log(url);
 
     fetch(url)
-      .then(response => response.json())
-      .then(response => {
+      .then((response) => response.json())
+      .then((response) => {
         // console.log(response);
         let newBuy = response;
         this.setBuyer(newBuy);
         // console.log(this.state.purchaseData);
       })
-      .catch(err => console.error(err));
+      .catch((err) => console.error(err));
   }
 
   render() {
     if (this.state.purchaseData) {
-      let posts = this.state.purchaseData.map(post => {
+      let posts = this.state.purchaseData.map((post) => {
         return (
           <div className="order">
             <h4>
@@ -89,25 +89,26 @@ class Buyer extends Component {
         );
       });
       return (
-        <div className="search">
-          <form onSubmit={this.handleClick}>
+        <div className="buyer_search">
+          <form className="buyer_search__form" onSubmit={this.handleClick}>
             <h2>Search for a specific Country's Purchases</h2>
             <input
+              className="buyer_search__input"
               type="text"
               placeholder="3 digit ISO code"
               value={this.state.saleCountry}
-              onChange={e => {
+              onChange={(e) => {
                 this.setState({ buyerCode: e.target.value });
               }}
             />
-            <button>Submit</button>
+            <button className="buyer_search__button">Submit</button>
           </form>
           <h6>You are searching for {this.state.buyerCode} Purchases</h6>
           <h2>
             There are {this.state.purchaseData.length} {this.state.buyerCode}{" "}
             purchase records available from 1998 to 2018
           </h2>
-          <div className="container">
+          <div className="buyer_container">
             <div className="">{posts}</div>
           </div>
         </div>

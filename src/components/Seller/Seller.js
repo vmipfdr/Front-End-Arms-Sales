@@ -12,16 +12,16 @@ class Seller extends Component {
 
     this.state = {
       salesData: [],
-      sellerCode: ""
+      sellerCode: "",
     };
   }
 
-  handleClick = e => {
+  handleClick = (e) => {
     e.preventDefault();
     this.componentDidMount();
     console.log("handled seller click");
   };
-  setSales = sales => {
+  setSales = (sales) => {
     this.setState({ salesData: sales });
     console.log(this.state.salesData);
   };
@@ -31,20 +31,20 @@ class Seller extends Component {
     console.log(url);
 
     fetch(url)
-      .then(response => response.json())
-      .then(response => {
+      .then((response) => response.json())
+      .then((response) => {
         console.log(response);
         let newSale = response;
         // console.log(newSale);
         this.setSales(newSale);
         // console.log(this.state.salesData);
       })
-      .catch(err => console.error(err));
+      .catch((err) => console.error(err));
   }
 
   render() {
     if (this.state.salesData) {
-      let posts = this.state.salesData.map(post => {
+      let posts = this.state.salesData.map((post) => {
         return (
           <div className="salesReceipt">
             <h4>
@@ -91,18 +91,19 @@ class Seller extends Component {
         );
       });
       return (
-        <div>
-          <form onSubmit={this.handleClick}>
+        <div className="sale_search">
+          <form className="sale_search__form" onSubmit={this.handleClick}>
             <h2>Search for a specific Country's Sales</h2>
             <input
+              className="sale_search__input"
               type="text"
               placeholder="3 digit ISO code"
               value={this.state.sellerCode}
-              onChange={e => {
+              onChange={(e) => {
                 this.setState({ sellerCode: e.target.value });
               }}
             />
-            <button>Submit</button>
+            <button className="sale_search__button">Submit</button>
           </form>
           <h6>You are searching for {this.state.sellerCode} Sales</h6>
           <h2>

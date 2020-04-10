@@ -1,3 +1,37 @@
+.sale_search {
+  padding: 8px;
+  border-radius: 10px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  font-size: 16px;
+  background-color: rgba(250, 250, 250, 0.6);
+  /* width: 100%; */
+}
+
+.sale_search__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sale_search__input {
+  margin-bottom: 5px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.sale_search__button {
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+}
+
 .price {
   font-size: 36px;
   font-weight: bold;
@@ -10,6 +44,6 @@
   padding: 10px;
 }
 
-.container {
+.sales_container {
   columns: 3 auto;
 }
