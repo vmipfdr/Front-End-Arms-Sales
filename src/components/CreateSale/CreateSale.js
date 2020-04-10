@@ -1,21 +1,22 @@
 import React, { Component } from "react";
+import Axios from "axios";
 
 class Form extends Component {
   constructor(props) {
     this.state = {
       sellerISOCode: "",
-      sellerFull: ""
+      sellerFull: "",
     };
   }
   getInitialState = () => {
     return {
-      title: this.props.title || "some title"
+      title: this.props.title || "some title",
     };
   };
 
   onChangeBuyer(e) {
     this.setState({
-      title: e.target.value
+      title: e.target.value,
     });
   }
 
@@ -26,9 +27,9 @@ class Form extends Component {
       e.preventDefault();
       console.log("submitted!");
       const newSale = {
-        sellerISOCode: this.state.sellerISOCode
+        sellerISOCode: this.state.sellerISOCode,
       };
-      Axios.post("website", newSale).then(res => console.log(res));
+      Axios.post("website", newSale).then((res) => console.log(res));
     }
   }
   render() {

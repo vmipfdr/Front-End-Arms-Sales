@@ -14,7 +14,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      alpha3Code: null
+      alpha3Code: null,
     };
     this.setCountry = this.setCountry.bind(this);
   }
@@ -25,25 +25,25 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <nav>
+      <div className="App">
+        <nav className="App-header">
           <Link to="/">
             <h1>Worldwide Arms Deals</h1>
           </Link>
           <Link to="/countrieslist">Country List</Link>
           <Link to="/buyersearch">Search Purchases by Country</Link>
           <Link to="/sellersearch">Search Sales by Country</Link>
-          <Link to="/create">Report a Sale</Link>
+          {/* <Link to="/create">Report a Sale</Link> */}
         </nav>
         <main>
           <Route path="/" exact component={Home} />
           <Route path="/countrieslist" component={CountriesList} />
           <Route path="/buyersearch" component={Buyer} />
           <Route path="/sellersearch" component={Seller} />
-          <Route path="/create" component={Create} />
+          {/* <Route path="/create" component={Create} /> */}
           <Route
             path="/country/:alpha3Code"
-            render={routerProps => (
+            render={(routerProps) => (
               <Country
                 setCountry={this.setCountry}
                 {...routerProps}
