@@ -2,12 +2,12 @@
 
 ## Prerequisites
 
-- React (wouldn't it be nice if I actually knew what I'm doing with React...)
+- React
 - Node and Express
 
 ## Requirements
 
-Considering I don't know React, I referenced other labs and homeworks (that had solution branches) to fumble through this. I was supposed to have Create and Read of CRUD, but still can't even achieve full Read. I can render a single object, but that's it.
+While working through this project, I didn't understand the fundamental concept of passing state.  For the entirety of the project, However, after sticking at it for more than 20 hours over the Thursday into 0300 on Monday (due at 0900) I completed the functionality of the project.  Afterwards, I refactored a bunch of the CSS to make the site more attractive.  Here, you see a full MERN personal project that references the database and API that I built the week prior [REPO](https://github.com/vmipfdr/20-Years-of-Arms-Sales) I built out a full CRUD platform (hiding create from the user).  
 
 ### Technical Requirements
 
