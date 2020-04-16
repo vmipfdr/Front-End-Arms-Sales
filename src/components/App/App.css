@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+main {
+  width: 90%;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -15,12 +19,12 @@ body {
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
 .App-header {
   background-color: #282c34;
-  width: 100%;
+  width: 100vw;
   min-height: 10vh;
   display: flex;
   flex-direction: row;
@@ -30,11 +34,17 @@ body {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.unique_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-nav h1 {
+.unique_list__link {
+  size: 10px;
+}
+
+.App-header__title {
   margin: 0;
   display: inline-block;
   vertical-align: middle;
@@ -52,8 +62,12 @@ nav a:hover {
   background: #282c34;
 }
 
-main {
-  width: 900px;
-  margin: auto;
-  height: 100%;
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
+  .App-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

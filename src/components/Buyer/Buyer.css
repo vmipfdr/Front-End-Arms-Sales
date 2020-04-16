@@ -49,3 +49,10 @@ span {
 .buyer_container {
   columns: 3 auto;
 }
+
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
+  .buyer_container {
+    columns: 1 auto;
+  }
+}
+

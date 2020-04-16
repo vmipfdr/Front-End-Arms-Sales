@@ -28,12 +28,20 @@ class App extends Component {
       <div className="App">
         <nav className="App-header">
           <Link to="/">
-            <h1>Worldwide Arms Deals</h1>
+            <h1 className="App-header__title">Worldwide Arms Deals</h1>
           </Link>
-          <Link to="/countrieslist">Country List</Link>
-          <Link to="/buyersearch">Search Purchases by Country</Link>
-          <Link to="/sellersearch">Search Sales by Country</Link>
-          {/* <Link to="/create">Report a Sale</Link> */}
+          <div className="unique_list">
+            <Link className="unique_list__link" to="/countrieslist">
+              Country List
+            </Link>
+            <Link className="unique_list__link" to="/buyersearch">
+              Search Purchases
+            </Link>
+            <Link className="unique_list__link" to="/sellersearch">
+              Search Sales
+            </Link>
+            {/* <Link className="unique_list__link" to="/create">Report a Sale</Link> */}
+          </div>
         </nav>
         <main>
           <Route path="/" exact component={Home} />
