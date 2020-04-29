@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 50%;
 }
 
 .countryData {
@@ -16,7 +17,14 @@
   /* align-items: center; */
 }
 
-@media only screen and (min-width: 300px) and (max-width: 400px) {
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+  .countryData {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1400px) {
   .countryData {
     width: 90%;
     max-width: 90%;
